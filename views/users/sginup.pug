@@ -1,0 +1,19 @@
+extends ../layout
+
+block main
+    form(method="post" action="/users/signup")
+        .mb-3
+            label.form-label(for="name") NAME
+            input#name.form-control(type="text" name="name" autocomplete="off" value=name)
+        .mb-3
+            label.form-label(for="password") PASSWORD
+            input#password.form-control(type="password" name="password" autocomplete="off")
+        .mb-3
+            label.form-label(for="email") EMAIL
+            input#email.form-control(type="email" name="email" autocomplete="off" value=email)
+        .mb-3
+            label.form-label(for="age") AGE
+            input#age.form-control(type="number" name="age" autocomplete="off"  value=age)
+        button.btn.btn-primary(type="submit") 登録
+    p.mt-4
+        a(href="/users/login") << ログインへ戻る
