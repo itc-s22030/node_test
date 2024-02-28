@@ -23,4 +23,3 @@ router.get("/list", async (req, res, next) => {
 
 
 export default router;
-        console.dir(book)

@@ -35,9 +35,7 @@ model Rental {
   userId         BigInt
   rentalDate     DateTime @default(now())
   returnDeadline DateTime @default(now())
-  returnDate     DateTime
-  users          users?   @relation(fields: [usersId], references: [id])
-  usersId        BigInt?
-  Books          Books?   @relation(fields: [booksId], references: [id])
-  booksId        BigInt?
+  returnDate     DateTime?
+  users          users   @relation(fields: [userId], references: [id])
+  Books          Books   @relation(fields: [bookId], references: [id])
 }
